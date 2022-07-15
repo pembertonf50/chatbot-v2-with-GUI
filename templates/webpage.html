@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hold Tight Chatbot</title>
+		<link href="..\static\style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<img src="..\static\profile picture.jpg" class="profile_picture" alt="profile picture man">
+			<h3 class="byline">Chatbot By: Luke Pemberton</h3>
+			<h1>Hold Tight Chatbot</h1>
+			<h2>For anyone wanting to learn about software engineering, this bot is perfect for you!</h2>
+		</header>
+		<main>
+			{% for chat_color in template_chat_list %}
+			{% if chat_color[1] == "pink"  or chat_color[1] == "exiting" %}
+			{% if chat_color[0] | length >= 104 %}
+			<p class="bubble1">{{ chat_color[0] }}</p>
+			{% else %}
+			<p id="block1"><span class="bubble1">{{ chat_color[0] }}</span></p>
+			{% endif %}
+
+			{% else %}
+			{% if chat_color[0] | length >= 104 %}
+			<p class="bubble3">{{ chat_color[0] }}</p>
+			<!--{% set breaks = ((chat_color[0] | length)/104)|round|int %}
+			{% for i in range(breaks) %}
+			<br>
+			{% endfor %}-->
+			{% else %}
+			<p id="block2"><span class="bubble2">{{ chat_color[0] }}</span></p>
+			<br>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+			{% if template_chat_list[-1][1] != "exiting" %}
+			<form action="/" method="POST">
+				<input name="user_input" size="60">
+				<input type="submit" value="send">
+			</form>
+			{% else %}
+			<form action="/" method="get">
+				<input type="submit" value="refresh chat">
+				<input type="hidden" name="refresh" value="refresh">
+			</form>
+
+			{% endif %}
+
+		</main>
+		<footer>
+			<nav>
+				<a href="https://github.com/pembertonf50" target="_blank">GitHub</a>
+				<a href="https://www.linkedin.com/in/luke-pemberton-01447a1b0/" target="_blank">LinkdIn</a>
+				<span>Contact: pembertonf50@gmail.com</span>
+			</nav>
+		</footer>
+	</body>
+</html>

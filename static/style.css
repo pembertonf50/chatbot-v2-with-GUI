@@ -1,0 +1,159 @@
+body {
+* Old browsers */
+  background: #141E30;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, #35577D, #141E30);
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 2em;
+  width: 62.5%;
+  padding-top: 40px;
+}
+
+h1, .byline {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.byline {
+  font-family: Helvetica;
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.profile_picture {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  float: left;
+  width: 90px;
+  margin-right: 10px;
+  padding-right: 0;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 62.5%;
+}
+
+a:hover {
+color: yellow;
+font-weight: bold;
+}
+
+main {
+height: 405px;
+overflow-y: scroll;
+width: 70%
+}
+
+footer {
+position: fixed;
+bottom: 10px;
+margin-top: 0;
+padding-top: 5px;
+}
+
+.bubble1 {
+position:relative;/**/
+width:100%;
+margin: 10px 20px 10px 20px;
+border-radius: 3px;
+background: pink;
+padding: 3px;
+max-width: 80%
+}
+
+.bubble1::after {
+content: "";
+display: block;
+position: absolute;
+left: -15px;
+top: 6px;
+width: 0;
+height: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-right: 15px solid pink;
+}
+
+span, a, p {
+  color: white;
+  line-height: 1.3em;
+  margin-right: 15px;
+}
+
+.bubble2 {
+position:relative;/**/
+width:100%;
+margin: 10px 67px 10px 20px;
+border-radius: 3px;
+background: lime;
+padding: 3px;
+max-width: 80%;
+}
+
+.bubble2::after {
+content: "";
+display: block;
+position: absolute;
+right: -15px;
+top: 6px;
+width: 0;
+height: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-left: 15px solid lime;
+}
+
+
+#block2 {
+float: right;
+text-align: right;
+margin:0 80px 0 0;
+}
+
+.bubble3 {
+background: lime;
+position:relative;/**/
+width:100%;
+margin: 10px 20px 10px 20px;
+border-radius: 3px;
+padding: 3px;
+max-width: 80%
+}
+
+.bubble3::after {
+content: "";
+display: block;
+position: absolute;
+right: -15px;
+top: 6px;
+width: 0;
+height: 0;
+border-top: 5px solid transparent;
+border-bottom: 5px solid transparent;
+border-left: 15px solid lime;
+
+}
+
+form {
+margin-left:20px;
+}
